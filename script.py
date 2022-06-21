@@ -78,7 +78,7 @@ By default, it takes the html files (Telegram archive) from the current director
     elif filename:
         output_rows = parse_html(filename)
 
-    with open("output.csv", "w") as csv_file:
+    with open("output.csv", "w", encoding='utf-8') as csv_file:
         writer = csv.writer(csv_file)
         writer.writerows(output_rows)
 
